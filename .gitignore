@@ -46,5 +46,7 @@ bower_components
 # handle it properly when it's symlinked (npm v3+)
 # node_modules/
 
+package-lock.json
+
 # TSD Debug info
 tsd-debug.log
