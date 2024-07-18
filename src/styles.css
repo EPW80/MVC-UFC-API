@@ -1,0 +1,41 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  color: #333;
+  text-align: center;
+}
+
+#fighter-content,
+#event-content {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin: 20px 0;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+strong {
+  color: #555;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  background: #fafafa;
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+li:nth-child(odd) {
+  background: #f1f1f1;
+}

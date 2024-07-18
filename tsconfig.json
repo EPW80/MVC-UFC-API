@@ -11,6 +11,9 @@
     "paths": {
       "cheerio": [
         "./node_modules/cheerio/index.d.ts"
+      ],
+      "electron": [
+        "./node_modules/@types/electron/index.d.ts"
       ]
     }
   },

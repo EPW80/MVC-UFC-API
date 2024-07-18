@@ -100,3 +100,11 @@ npm run build
 - @types/node: ^20.3.1
 - ts-node: ^10.9.1
 - typescript: ^5.1.6
+
+## Demo
+
+[Loom](https://www.loom.com/share/d074ff01311d4042bf38dda2642fe6bf?sid=c04bce09-b46c-4cf0-963a-731867cde530)
+
+## Contributor
+
+Erik Williams
