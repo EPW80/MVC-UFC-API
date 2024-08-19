@@ -5,11 +5,13 @@ import { EventModel } from "./models/EventModel";
 
 function createWindow() {
   const mainWindow = new BrowserWindow({
-    width: 800,
-    height: 600,
+    width: 1000, // Increased width for better display
+    height: 700,
+    minWidth: 800, // Set a minimum width
+    minHeight: 600, // Set a minimum height
     webPreferences: {
-      preload: path.join(__dirname, "preload.js"), // Use preload script if needed
-      contextIsolation: true, // Recommended for security
+      preload: path.join(__dirname, "preload.js"),
+      contextIsolation: true,
     },
   });
 
@@ -19,16 +21,31 @@ function createWindow() {
     app.quit();
   });
 
+  // Open dev tools by default in development mode
+  if (process.env.NODE_ENV === "development") {
+    mainWindow.webContents.openDevTools();
+  }
+
   // Handle IPC request to get fighter data
   ipcMain.handle("get-fighter-data", async (event, url) => {
-    const fighter = await FighterModel.parseSherdogFighter(url);
-    return fighter;
+    try {
+      const fighter = await FighterModel.parseSherdogFighter(url);
+      return fighter;
+    } catch (error) {
+      console.error("Failed to fetch fighter data:", error);
+      return { error: "Failed to fetch fighter data" };
+    }
   });
 
   // Handle IPC request to get event data
   ipcMain.handle("get-event-data", async (event, url) => {
-    const eventData = await EventModel.parseEvent(url);
-    return eventData;
+    try {
+      const eventData = await EventModel.parseEvent(url);
+      return eventData;
+    } catch (error) {
+      console.error("Failed to fetch event data:", error);
+      return { error: "Failed to fetch event data" };
+    }
   });
 }
 

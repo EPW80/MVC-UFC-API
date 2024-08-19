@@ -11,7 +11,7 @@ A TypeScript project with MVC architecture for fetching and displaying UFC fight
 
 ## Project Structure
 
-```
+```bash
 mvc-ufc-api/
 ├── dist/
 ├── node_modules/
@@ -34,29 +34,35 @@ mvc-ufc-api/
 
 Clone the repository:
 
-```
+```bash
 git clone 
 cd into project
 ```
 
 Install dependencies:
 
-```
+```bash
 npm install
 ```
 
 ## Usage
 
-Start the application:
+Start the terminal:
 
-```
+```bash
 npm start
 ```
 
-Build the project:
+Compiles TypeScript to JavaScript:
 
-```
+```bash
 npm run build
+```
+
+Builds and starts the Electron app:
+
+```bash
+npm run start-electron
 ```
 
 ## Scripts

@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MVC UFC API</title>
-    <link rel="stylesheet" href="./styles.css" />
-  </head>
-  <body>
-    <h1>Welcome to MVC UFC API</h1>
-    <div id="fighter-content"></div>
-    <div id="event-content"></div>
-    <script src="./renderer.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MVC UFC API</title>
+  <link rel="stylesheet" href="./styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <h1>Welcome to MVC UFC API</h1>
+  <input type="text" id="search-bar" placeholder="Search for fighters or events..." />
+  <button id="search-button">Search</button>
+  <div id="search-results"></div>
+  <div id="fighter-content"></div>
+  <div id="event-content"></div>
+  <script src="./renderer.js"></script>
+</body>
 </html>
